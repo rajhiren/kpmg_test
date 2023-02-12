@@ -211,19 +211,21 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser = argparse.ArgumentParser(
-        prog='KPMG Test for Texas Holdem Poker',
-        description='This program shows that I have ability to code in python',
-        epilog='Ideally this program takes player name as argument and community cards and suggest which cards needed to make them winner')
+        prog='python3 main.py',
+        description='KPMG Test for Texas Holdem Poker',
+        epilog='Ideally this program takes player name as argument and community cards and suggest which cards needed to make them winner. This program shows that I have ability to code in python')
 
     parser.add_argument(
         "-c",
         "--community",
         help="input a list of 3 community cards for e.g. 'S10','D1', 'CJ'",
+        required=True
     )
     parser.add_argument(
         "-p",
         "--player",
         help="Player name",
+        required=True
     )
 
     parser.add_argument(
@@ -231,6 +233,7 @@ if __name__ == "__main__":
         "--debug",
         type=int,
         help="Set debug flag to 1 or 0",
+        required=True
     )
     args = parser.parse_args()
 
